@@ -1,17 +1,5 @@
-function isLeap(n){
-    if(n%4===0){
-        if(n%100 === 0){
-            if(n%400 === 0){
-                return true;
-            }else{
-                return false;
-            }
-        }else{
-            return true;
-        }
-    }else{
-        return false;
-    }
+function isLeap(year) {
+  return (year % 4 === 0) && (year % 100 !== 0 || (year % 400 === 0));
 }
 
-module.exports = {isLeap}
+module.exports = { isLeap };
